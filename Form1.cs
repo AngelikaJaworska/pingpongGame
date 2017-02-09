@@ -24,12 +24,16 @@ namespace pingpong
         public Bitmap face2;
         public Bitmap ball;
 
+        //after ball speed change, change also faces speeds!
+
         private const int SIZE_FACE = 60; //size of faces
         private const int SIZE_BALL = 40; //size of the ball
 
         private const int SPEED_Y = 5; //speed of the ball
         public int speed_top = SPEED_Y;
         public int speed_left = 8;
+
+        private const int SPEED_FACE = 10; //speeds of faces
 
         public int score_face1 = 0; //score
         public int score_face2 = 0;
@@ -62,22 +66,22 @@ namespace pingpong
         {
             if(e.KeyCode == Keys.W)
             {
-                y1 -= 10;
+                y1 -= SPEED_FACE;
             }
 
             if (e.KeyCode == Keys.S)
             {
-                y1 += 10;
+                y1 += SPEED_FACE;
             }
 
             if (e.KeyCode == Keys.Up)
             {
-                y2 -= 10;
+                y2 -= SPEED_FACE;
             }
 
             if (e.KeyCode == Keys.Down)
             {
-                y2 += 10;
+                y2 += SPEED_FACE;
             }
             
         }
